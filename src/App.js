@@ -2,6 +2,7 @@ import React, { useState} from 'react'
 import './App.css';
 import { DatePicker, Button, Typography, Space} from 'antd';
 import 'antd/dist/antd.css'; 
+import Confetti from "react-confetti";
 import { Layout, Menu, Breadcrumb } from 'antd';
 import {
   DesktopOutlined,
@@ -77,6 +78,8 @@ function App() {
     setCollapsed(collapsed);
   };
 
+  const GreetingMessage ="Antonio Rivera";
+
   return (
     <div>
     <Layout style={{ minHeight: '100vh' }}>
@@ -123,7 +126,9 @@ function App() {
                 <Step status="wait" title="Finalizar" icon={<SmileOutlined />} />
               </Steps>
               <br/><br/><br/>
-
+              <h1>{GreetingMessage}</h1>
+               <Confetti />
+               <br/><br/><br/>             
               <Transfer
                 dataSource={mockData}
                 titles={['Fuente', 'Destino']}
